@@ -1,0 +1,7 @@
+from chatterbot import chatbot
+from chatterbot.trainers import ListTrainers
+chatbot = chatbot('TREV')
+trainer = ListTrainer(chatbot)
+trainer.train(['hi, can i help you find a course', 'sure i love to find you a course', 'your course have been selected'])
+response = chatbot.get_response("i want a course")
+print(response)
